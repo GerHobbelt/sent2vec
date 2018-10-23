@@ -1,3 +1,15 @@
+# Forking Notes
+
+Installing the original sent2vec from a requirements file is a bit of a pain because 1) you need to manually install cython/numpy and 2) setup.py is not at the root of the git repo
+
+This fork solves these problems, so you can now add sent2vec to your requirements file as 
+
+'''
+-e git+https://github.com/AlexisJJ/sent2vec.git#egg=sent2vec
+'''
+
+(No manual install of cython/numpy necessary)
+
 # sent2vec
 TLDR: This library delivers numerical representations (features) for short texts or sentences, which can be used as input to any machine learning task later on. Think of it as an unsupervised version of [FastText](https://github.com/facebookresearch/fastText), and an extension of word2vec (CBOW) to sentences.
 
