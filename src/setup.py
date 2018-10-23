@@ -50,6 +50,7 @@ ext=[Extension('*',
 
 setup(
   name='sent2vec',
+  version='1.0.0',
   ext_modules=cythonize(ext)
 )
 
