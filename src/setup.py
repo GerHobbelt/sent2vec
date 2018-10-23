@@ -1,7 +1,33 @@
+# Automated install inspired by https://github.com/PyO3/pyo3/blob/master/examples/word-count/setup.py#L6
+import subprocess
+import sys
+
+try:
+    from Cython.Build import cythonize
+except ImportError:
+
+    errno = subprocess.call([sys.executable, "-m", "pip", "install", "cython"])
+    if errno:
+        print("Automated install of cython failed. Please install it manually.")
+        raise SystemExit(errno)
+    else:
+        from Cython.Build import cythonize
+
+
+try:
+    import numpy
+except ImportError:
+
+    errno = subprocess.call([sys.executable, "-m", "pip", "install", "numpy"])
+    if errno:
+        print("Automated install of numpy failed. Please install it manually.")
+        raise SystemExit(errno)
+    else:
+        import numpy
+
+
 from distutils.core import setup
-from Cython.Build import cythonize
 from distutils.extension import Extension
-import numpy
 
 sourcefiles  = ['sent2vec.pyx', 
                 'fasttext.cc', 
