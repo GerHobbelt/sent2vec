@@ -2,11 +2,11 @@
 
 Installing the original sent2vec from a requirements file is a bit of a pain because 1) you need to manually install cython/numpy and 2) setup.py is not at the root of the git repo
 
-This fork solves these problems, so you can now add sent2vec to your requirements file as 
+### This fork solves these problems, so you can now add sent2vec to your requirements file as 
 
-'''
+```
 -e git+https://github.com/AlexisJJ/sent2vec.git#egg=sent2vec
-'''
+```
 
 (No manual install of cython/numpy necessary)
 
