@@ -1,3 +1,9 @@
+## Packaging
+
+```bash
+python setup.py sdist
+```
+
 ## Updates 
 
 Code and pre-trained models related to the [Bi-Sent2vec](https://arxiv.org/abs/1912.12481), cross-lingual extension of Sent2Vec can be found [here](https://github.com/epfml/Bi-sent2vec). 

@@ -1,0 +1,3 @@
+include src/sent2vec.pyx
+include src/*.h
+
